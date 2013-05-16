@@ -1,0 +1,8 @@
+syntax enable
+set background=dark
+colorscheme solarized
+" PowerShell
+au BufNewFile,BufRead *.ps1,*.psc1 setf ps1
+set guioptions-=T
+set showtabline=2
+nnoremap <F5> :GundoToggle<CR>
