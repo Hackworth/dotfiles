@@ -1,1 +1,1 @@
-/Users/hack/.vim/janus/vim/vimrc
+.vim/janus/vim/vimrc
