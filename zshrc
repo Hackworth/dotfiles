@@ -29,7 +29,7 @@ ZSH_THEME="kphoen"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cloudapp nyan zsh-syntax-highlighting rsync autojump command-not-found python github gnu-utils history-substring-search)
+plugins=(vi-mode git brew cloudapp nyan zsh-syntax-highlighting rsync autojump command-not-found python github gnu-utils history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
