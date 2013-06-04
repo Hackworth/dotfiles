@@ -36,6 +36,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+eval `dircolors ~/dotfiles/dircolors/dircolors.256dark`
+
 platform=$(uname);
 if [[ $platform == 'Darwin' ]]; then
 	export JAVA_HOME="$(/usr/libexec/java_home)"
