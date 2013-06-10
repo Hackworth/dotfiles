@@ -36,8 +36,14 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+#Solarized Dark ls colors
 eval `dircolors ~/dotfiles/dircolors/dircolors.256dark`
 
+# For RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+#ec2 tools only on OS X
 platform=$(uname);
 if [[ $platform == 'Darwin' ]]; then
 	export JAVA_HOME="$(/usr/libexec/java_home)"
