@@ -43,6 +43,9 @@ eval `dircolors ~/dotfiles/dircolors/dircolors.256dark`
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# 256 Colors for tmux
+[ -n "$TMUX" ] && export TERM=screen-256color
+
 #ec2 tools only on OS X
 platform=$(uname);
 if [[ $platform == 'Darwin' ]]; then
