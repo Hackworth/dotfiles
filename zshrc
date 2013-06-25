@@ -36,12 +36,18 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
+# Editor 
+export EDITOR=vim
+
 #Solarized Dark ls colors
 eval `dircolors ~/dotfiles/dircolors/dircolors.256dark`
 
 # For RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+# For tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 # 256 Colors for tmux
 [ -n "$TMUX" ] && export TERM=screen-256color
@@ -55,3 +61,5 @@ if [[ $platform == 'Darwin' ]]; then
 	export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
 	export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
 fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
