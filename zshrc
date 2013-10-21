@@ -63,3 +63,5 @@ if [[ $platform == 'Darwin' ]]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+alias tmux="TERM=screen-256color-bce tmux"
