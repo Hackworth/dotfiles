@@ -8,7 +8,8 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="tmux.conf tmux-powerlinerc bashrc vimrc vim zshrc oh-my-zsh vimrc.before vimrc.after gemrc"    # list of files/folders to symlink in homedir
+files="tmux.conf bashrc vimrc vim zshrc oh-my-zsh vimrc.before vimrc.after gemrc"    # list of files/folders to symlink in homedir
+ln -s ~/dotfiles/powerlinecfg ~/.config/powerline
 
 ##########
 

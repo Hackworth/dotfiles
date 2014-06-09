@@ -34,7 +34,7 @@ plugins=(git brew cloudapp nyan zsh-syntax-highlighting rsync autojump command-n
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/dotfiles/powerline/scripts:$PATH
 
 # Editor 
 export EDITOR=vim
@@ -63,5 +63,7 @@ if [[ $platform == 'Darwin' ]]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export POWERLINE_COMMAND=$HOME/dotfiles/powerline/scripts/powerline
 
 alias tmux="TERM=screen-256color-bce tmux"
