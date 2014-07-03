@@ -1,5 +1,6 @@
 #!/bin/sh
 cd ~/dotfiles/vim
+git checkout master
 rake
 cd ~/dotfiles
 git pull
