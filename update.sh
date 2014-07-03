@@ -1,6 +1,6 @@
 #!/bin/sh
 cd ~/dotfiles/vim
-rake update
+rake
 cd ~/dotfiles
 git pull
 git submodule update --recursive --init
