@@ -65,5 +65,6 @@ fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export POWERLINE_COMMAND=$HOME/dotfiles/powerline/scripts/powerline
+export DISABLE_AUTO_TITLE=true
 
 alias tmux="TERM=screen-256color-bce tmux"
