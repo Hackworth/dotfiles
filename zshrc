@@ -34,7 +34,7 @@ plugins=(git brew cloudapp nyan zsh-syntax-highlighting rsync autojump command-n
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/dotfiles/powerline/scripts:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/bin:$HOME/dotfiles/powerline/scripts:$PATH
 
 # Editor 
 export EDITOR=vim
