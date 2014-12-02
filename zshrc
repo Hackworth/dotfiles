@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/bin:$HOME/dotfiles/powerline/scripts:$PATH
 
-# Editor 
+# Editor
 export EDITOR=vim
 
 #Solarized Dark ls colors
@@ -52,19 +52,10 @@ blah ~/dotfiles/dircolors/dircolors.256dark >> /dev/null 2>&1
 # 256 Colors for tmux
 [ -n "$TMUX" ] && export TERM=screen-256color
 
-#ec2 tools only on OS X
-platform=$(uname);
-if [[ $platform == 'Darwin' ]]; then
-	export JAVA_HOME="$(/usr/libexec/java_home)"
-	export EC2_PRIVATE_KEY="$(/bin/ls "$HOME"/.ec2/pk-*.pem | /usr/bin/head -1)"
-	export EC2_CERT="$(/bin/ls "$HOME"/.ec2/cert-*.pem | /usr/bin/head -1)"
-	export EC2_AMITOOL_HOME="/usr/local/Library/LinkedKegs/ec2-ami-tools/jars"
-	export EC2_HOME="/usr/local/Library/LinkedKegs/ec2-api-tools/jars"
-fi
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-export POWERLINE_COMMAND=$HOME/dotfiles/powerline/scripts/powerline
+export POWERLINE_COMMAND=$HOME/dotfiles/powerline/scripts/powerline-render
 export DISABLE_AUTO_TITLE=true
 
 alias tmux="TERM=screen-256color-bce tmux"
