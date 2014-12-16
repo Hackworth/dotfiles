@@ -40,7 +40,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$HOME/bin:
 export EDITOR=vim
 
 #Solarized Dark ls colors
-blah ~/dotfiles/dircolors/dircolors.256dark >> /dev/null 2>&1
+eval `dircolors ~/dotfiles/dircolors/dircolors.256dark`
 
 # For RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
