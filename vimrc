@@ -5,6 +5,14 @@
 " :PlugInstall :PlugUpdate :PlugClean
 " :StripWhitespace
 
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark
+set termguicolors
+set t_Co=16
+
 set nu
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -98,7 +106,9 @@ Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'easymotion/vim-easymotion'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'lifepillar/vim-solarized8'
 
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
+colorscheme solarized8
