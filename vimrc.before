@@ -1,3 +1,0 @@
-let mapleader = ","
-set rtp+=~/dotfiles/powerline/powerline/bindings/vim
-au BufNewFile,BufRead *.ps1,*.psc1,*.psm1 setf ps1
