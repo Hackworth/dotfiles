@@ -98,6 +98,9 @@ function! HasPaste()
   return ''
 endfunction
 
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
@@ -107,6 +110,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'easymotion/vim-easymotion'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'lifepillar/vim-solarized8'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
