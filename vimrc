@@ -128,6 +128,7 @@ nmap <leader>gr <Plug>(coc-references)
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 colorscheme solarized8
+let g:airline#extensions#tabline#enabled = 1
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
