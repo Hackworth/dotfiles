@@ -4,6 +4,7 @@
 " ctrl-n - nerd tree
 " :PlugInstall :PlugUpdate :PlugClean
 " :StripWhitespace
+" :CocInstall coc-python
 
 " set Vim-specific sequences for RGB colors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -13,7 +14,7 @@ set background=dark
 set termguicolors
 set t_Co=16
 
-set nu
+set number relativenumber
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -103,16 +104,33 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'easymotion/vim-easymotion'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-p> :Files<CR>
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 colorscheme solarized8
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh()
