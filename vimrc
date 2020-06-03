@@ -1,8 +1,8 @@
 " :map ,t :w\|!ruby %<cr>
 " ,c<space> - toggle comments
-" :W - sudo write
-" ctrl-n - nerd tree
-" :PlugInstall :PlugUpdate :PlugClean
+ ":W - sudo write
+ "ctrl-n - nerd tree
+ ":PlugInstall :PlugUpdate :PlugClean
 " :StripWhitespace
 " :CocInstall coc-python
 
@@ -12,7 +12,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 set background=dark
 set termguicolors
-set t_Co=16
+"set t_Co=16
+set updatetime=50
 
 set number relativenumber
 " Sets how many lines of history VIM has to remember
@@ -90,7 +91,7 @@ set wrap "Wrap lines
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 function! HasPaste()
   if &paste
@@ -104,7 +105,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'preservim/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-unimpaired'
 Plug 'easymotion/vim-easymotion'
 Plug 'ntpeters/vim-better-whitespace'
@@ -114,10 +116,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
 nnoremap <C-p> :Files<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+map <leader>/ <plug>NERDCommenterToggle<CR>
 nmap <leader>gd <Plug>(coc-definition)
 nmap <leader>gr <Plug>(coc-references)
 vnoremap J :m '>+1<CR>gv=gv
