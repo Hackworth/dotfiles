@@ -14,6 +14,7 @@ set background=dark
 set termguicolors
 "set t_Co=16
 set updatetime=50
+set backspace=indent,eol,start
 
 set number relativenumber
 " Sets how many lines of history VIM has to remember
