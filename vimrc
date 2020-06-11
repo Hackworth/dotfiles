@@ -91,16 +91,6 @@ set wrap "Wrap lines
 " Always show the status line
 set laststatus=2
 
-" Format the status line
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-function! HasPaste()
-  if &paste
-    return 'PASTE MODE  '
-  endif
-  return ''
-endfunction
-
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 
