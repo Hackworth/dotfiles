@@ -19,6 +19,7 @@ set backspace=indent,eol,start
 set number relativenumber
 " Sets how many lines of history VIM has to remember
 set history=500
+set signcolumn=yes
 
 " Enable filetype plugins
 filetype plugin on
@@ -77,8 +78,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 " Linebreak on 500 characters
 set lbr
@@ -109,6 +110,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
+Plug 'mhinz/vim-signify'
 
 call plug#end()
 
@@ -147,7 +149,7 @@ function! ToggleSignColumn()
         set signcolumn=no
         let b:signcolumn_on=0
     else
-        set signcolumn=auto
+        set signcolumn=yes
         let b:signcolumn_on=1
     endif
 endfunction
