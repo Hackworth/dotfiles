@@ -40,10 +40,6 @@ let mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" :W sudo saves the file
-" (useful for handling the permission-denied error)
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
-
 " Ignore case when searching
 set ignorecase
 
@@ -115,6 +111,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
