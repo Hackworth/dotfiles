@@ -21,6 +21,10 @@ set number relativenumber
 set history=500
 set signcolumn=yes
 
+set hidden
+set scrolloff=8
+set nohlsearch
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
