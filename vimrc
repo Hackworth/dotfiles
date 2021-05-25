@@ -111,6 +111,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-eunuch'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -153,3 +154,12 @@ function! ToggleSignColumn()
         let b:signcolumn_on=1
     endif
 endfunction
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" System clipboard on macOS
+set clipboard=unnamed
